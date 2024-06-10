@@ -20,7 +20,7 @@ router.post(
   upload.single("file"),
   async (req, res) => {
     try {
-      cloudinary.v2.uploader.upload(
+      Cloudinary.v2.uploader.upload(
         req.file.path,
         {
           folder: "sheymusic-udmey",
@@ -68,7 +68,7 @@ router.post(
     try {
       let response = null;
       if (req.file) {
-        response = await cloudinary.v2.uploader.upload(req.file.path, {
+        response = await Cloudinary.v2.uploader.upload(req.file.path, {
           folder: "sheymusic-udmey",
           use_filename: true,
           resource_type: "raw",
