@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const authMiddleware = require("../middlewares/authMiddleware");
-const { cloudinary } = require("../Cloudinary");
+const { Cloudinary } = require("../Cloudinary");
 const Song = require("../models/songModel");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
